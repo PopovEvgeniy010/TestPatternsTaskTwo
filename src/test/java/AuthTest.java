@@ -23,8 +23,8 @@ public class AuthTest {
         $("[data-test-id=\"login\"] input").setValue(registeredUser.getLogin());
         $("[data-test-id=\"password\"] input").setValue(wrongPassword);
         $("button.button").click();
-        $("[data-test-id=\"error-notification\"]").should(Condition.appear);
-        $(".notification__content").shouldHave(Condition.text("Ошибка! Неверно указан логин или пароль"), Duration.ofSeconds(15)).shouldBe(Condition.visible);
+        $("[data-test-id=\"error-notification\"] .notification__content").shouldHave(Condition.text("Ошибка! Неверно указан логин или пароль")).shouldBe((Condition.visible));
+        //$(".notification__content").shouldHave(Condition.text("Ошибка! Неверно указан логин или пароль"), Duration.ofSeconds(15)).shouldBe(Condition.visible);
 
     }
 }
