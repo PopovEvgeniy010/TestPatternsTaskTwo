@@ -70,8 +70,6 @@ public class AuthTest {
         $("button.button").click();
         $("[data-test-id=\"error-notification\"] .notification__content").shouldBe(Condition.appear);
         $(".notification__content").shouldHave(Condition.text("Ошибка! Неверно указан логин или пароль"), Duration.ofSeconds(15)).shouldBe(Condition.visible);
-        // $("[data-test-id=\"error-notification\"] .notification__content").shouldHave(Condition.text("Ошибка! Неверно указан логин или пароль")).shouldBe((Condition.visible));
-
     }
 }
 
